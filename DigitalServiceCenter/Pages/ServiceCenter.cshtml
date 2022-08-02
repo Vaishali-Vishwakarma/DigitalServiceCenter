@@ -1,0 +1,22 @@
+﻿@page
+@model DigitalServiceCenter.Pages.ServiceCenterModel
+@{
+}
+<form class="registration login" method="post" enctype="multipart/form-data">
+	<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+	<input type="text" name="CompaneyName" placeholder="Companey Name"/>
+	<span asp-validation-for="Companey.CompaneyName" class="text-danger"></span>
+
+	<input type="email" name="Email" placeholder="Email"/>
+
+	<input type="text" name="Subject" placeholder="Subject"/>
+
+	<input type="text" name="Discription" placeholder="Companey Description"/>
+
+	<textarea name="AddressContactInfo" placeholder="Companey Address & Contact Info"></textarea>
+	
+	<input type="file" name="File"/>
+
+	<button type="submit">Send</button>
+</form>

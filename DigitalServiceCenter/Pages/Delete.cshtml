@@ -1,0 +1,22 @@
+﻿@page
+@model DigitalServiceCenter.Pages.DeletModel
+@{
+
+<form class="registration form login" method="post" enctype="multipart/form-data">
+	<input type="hidden" name="id" value="@Model.companey.Id"/>
+	<input type="text" name="CompaneyName" placeholder="Companey Name" value="@Model.companey.CompaneyName"/>
+	<input type="email" name="Email" placeholder="Email" value="@Model.companey.Email"/>
+	<input type="text" name="Subject" placeholder="Subject" value="@Model.companey.Subject"/>
+	<input type="text" name="Discription" placeholder="Companey Description" value="@Model.companey.Discription"/>
+	<textarea name="AddressContactInfo" placeholder="Companey Address & Contact Info" value="@Model.companey.AddressContactInfo">@Model.companey.AddressContactInfo</textarea>	
+	<input type="file" name="File" value="~/Images/@Model.companey.ImageName"/>
+	<div class="row">
+		<div class="col-lg-6 col-md-6 col-sm-6">
+			<button class="btn bg-danger text-white" type="submit">Delete</button>
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-6">
+			<button href="/Services/@Model.companey.CompaneyName" class="btn bg-info text-white">Cancel</button>
+		</div>
+	</div>
+</form>
+}

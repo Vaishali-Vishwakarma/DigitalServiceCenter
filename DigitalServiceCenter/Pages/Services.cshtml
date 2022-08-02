@@ -1,0 +1,38 @@
+﻿@page "{CompaneyName?}"
+@model DigitalServiceCenter.Pages.ServicesModel
+@{
+	ViewData["Title"] = "Services";
+}
+@*<h1>Services</h1>*@
+<div class="container col-md-8">
+	@*<a class="btn btn-primary btn-sm" href="/Registration">Add Companey</a>*@
+	@foreach(var item in Model.Companeys)
+	{
+		<table class="table table-responsive bg-info">
+			<tr>
+				<th width="40%">Companey Name</th>
+				<td>@item.CompaneyName</td>
+			</tr>
+			<tr>
+				<th width="40%">Email</th>
+				<td>@item.Email</td>
+			</tr>
+			<tr>
+				<th width="40%">Subject</th>
+				<td>@item.Subject</td>
+			</tr>
+			<tr>
+				<th width="40%">Description</th>
+				<td>@item.Discription</td>
+			</tr>
+			<tr>
+				<th width="40%">Address/Contact Info</th>
+				<td>@item.AddressContactInfo</td>
+			</tr>
+			@*<tr>
+				<td><a class="btn btn-primary" href="/Edit?Id=@item.Id">Edit</a></td>
+				<td><a class="btn btn-danger" href="/Delet?Id=@item.Id">Delete</a></td>
+			</tr>*@
+		</table>
+	}
+</div>

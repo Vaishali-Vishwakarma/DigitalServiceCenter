@@ -1,0 +1,14 @@
+﻿@page
+@model DigitalServiceCenter.Pages.EditModel
+@{
+}
+<form class="registration login" method="post" enctype="multipart/form-data">
+	<input type="hidden" name="id" value="@Model.companey.Id"/>
+	<input type="text" name="CompaneyName" placeholder="Companey Name" value="@Model.companey.CompaneyName"/>
+	<input type="email" name="Email" placeholder="Email" value="@Model.companey.Email"/>
+	<input type="text" name="Subject" placeholder="Subject" value="@Model.companey.Subject"/>
+	<input type="text" name="Discription" placeholder="Companey Description" value="@Model.companey.Discription"/>
+	<textarea name="AddressContactInfo" placeholder="Companey Address & Contact Info" value="@Model.companey.AddressContactInfo">@Model.companey.AddressContactInfo</textarea>	
+	@*<input type="file" name="File" value="@Model.companey.ImageName"/>*@
+	<button type="submit">Send</button>
+</form>

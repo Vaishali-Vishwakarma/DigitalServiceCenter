@@ -1,0 +1,45 @@
+﻿*::before,*::after,*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+.login {
+/*    height: calc(100vh - 300px);*/
+    width: 470px;
+    margin: 20px auto 0;
+    border: 1px solid black;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.login h2{
+    padding: 20px 0;
+}
+.login input,textarea{
+    display: block;
+    height: 40px;
+    width: 80%;
+    margin: 40px auto;
+    padding: 0 20px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+
+}
+.login input,button{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.login button {
+    height: 40px;
+    width: 80%;
+    display: block;
+    margin: 60px auto;
+    border: none;
+    font-weight: bolder;
+    background: rgb(161, 27, 253);
+}
+
+.registration{
+    height: auto;
+    margin: 25px auto 0; 
+}

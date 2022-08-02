@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - DigitalServiceCenter</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/LoginRegistration.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/DigitalServiceCenter.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="bg-drak text-white position-sticky">
+        <nav class="navbar navbar-expand-md navbar-toggleable-md navbar-light border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="logo" asp-area="" asp-page="/Index">DigitalServiceCenter</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-md-inline-flex justify-content-evenly">
+                    <ul class="navbar-nav flex-grow-1 justify-content-lg-end">
+                        <li class="nav-item text-center">
+                            <a class="nav-link py-3 d-block" asp-area="" asp-page="/Index">Home</a>
+                        </li>
+                        <li class="nav-item text-center dropdown">
+                            <a class="nav-link py-3 d-block dropdown-toggle" id="dropdownMenuLink" data-bs-toggle="dropdown" asp-area="" asp-page="/Index">Customer Care</a>
+                            <div class="dropdown-menu" area-labeledby="dropdownMenuLink">
+                               <div class="row" style="width:500px;">
+                                <div class="col-lg-4 col-md-12">
+                                <h3 class="px-3 text-warning">Mobiles Accessories</h3>
+                                <a class="dropdown-item" href="Services?CompaneyName=Ample%20Technologies%20(p)%20Ltd">Apple</a>
+                                <a class="dropdown-item" href="Services?CompaneyName=Blackberry">Blackberry</a>
+                                <a class="dropdown-item" href="Services?CompaneyName=Micromax">Micromaxa</a>
+                                <a class="dropdown-item" href="Services?CompaneyName=Lava">Lava</a>
+                                <a class="dropdown-item" href="Services?CompaneyName=Tata">Tata</a>
+                                <a class="dropdown-item" href="Services?CompaneyName=Micromax">Micromax</a>
+                                </div>
+                                <div class="col-lg-4 col-md-12">
+                                <h3 class="px-3 text-warning">Home Appliances</h3>
+                                <a class="dropdown-item">Usha</a>
+                                <a class="dropdown-item">Panasonic</a>
+                                <a class="dropdown-item">Whirlpool</a>
+                                <a class="dropdown-item">Carrier</a>
+                                <a class="dropdown-item">Kenstar</a>
+                                <a class="dropdown-item">Philips</a>
+                                </div>
+                                <div class="col-lg-4 col-md-12">
+                                 <h3 class="px-3 text-warning">Auto mobiles</h3>
+                                <a class="dropdown-item" href="Services?CompaneyName=BMW">BMW</a>
+                                <a class="dropdown-item" href="Services?CompaneyName=Ford%20Car">Ford</a>
+                                <a class="dropdown-item">Hyundai</a>
+                                <a class="dropdown-item">Audi</a>
+                                <a class="dropdown-item" href="Services?CompaneyName=Tata">Tata</a>
+                                <a class="dropdown-item">Volkswagen</a>
+                                </div>
+                             </div>
+                            </div>
+                        </li>
+                        <li class="nav-item text-center">
+                            <a class="nav-link py-3 d-block" asp-area="" asp-page="/Services">Service Locator</a>
+                        </li>
+                        <li class="nav-item text-center">
+                            <a class="nav-link py-3 d-block" asp-area="" asp-page="/login">Add Componey</a>
+                        </li>
+                        <li class="nav-item text-center">
+                            <a class="nav-link py-3 d-block" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                    @*<p class="nav navbar-text">Hello, @User.Identity?.Name!</p>*@
+                </div>
+            </div>
+        </nav>
+    </header>
+ 
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer id="contact" class="border-top text-muted bg-dark">
+        <div class="container" style="height: auto;">
+            <div class="row py-5 d-flex justify-content-center" style="height: 85%;">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <h2 class="border-bottom border-danger border-5 d-inline-block mb-3">ABOUT US</h2>
+                    <p class="text-wrap text-white" style="line-height: 40px;">Welcome to DigitalServiceCenter, An information portal that publishes Customer Care Contact information of all Indian companies across all categories. Find Address, Toll Free Numbers and Email Support information with ease.</p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <h2 class="border-bottom border-danger border-5 d-inline">CATEGORIES:</h2>
+                    <ul class="text-white">
+                        <li class="mt-3" style="line-height: 30px;"><a> Automobiles</a></li>
+                        <li style="line-height: 30px;"><a> Airlines</a></li>
+                        <li style="line-height: 30px;"><a> Banking</a></li>
+                        <li style="line-height: 30px;"><a> Consumer Goods</a></li>
+                        <li style="line-height: 30px;"><a> Electronics</a></li>
+                        <li style="line-height: 30px;"><a> Education</a></li>
+                        <li style="line-height: 30px;"><a> Entertainment</a></li>
+                        <li style="line-height: 30px;"><a> Fire</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <h2 class="border-bottom border-danger border-5 d-inline">CONTACT-US:</h2>
+                    <form class="py-4" style="height: 200px;">
+                        <label class="text-white">Name</label>
+                        <input class="py-1 px-2" style="width: 40%;" type="text" placeholder="please enter your full name" />
+                        <label class="text-white">Email</label>
+                        <input class="py-1 px-2" style="width: 40%;" type="email" placeholder="Enter your email" /><br />
+                        @*<label>Enter your Message</label>*@
+                        <textarea rows="5" cols="100" placeholder="Enter Your message.." style="height:100px; width: 100%;"></textarea>
+                        <button class="btn-primary px-3 py-2 mx-4" style="border:none; border-radius: unset; float:right;" type="submit">Submit</button>
+                    </form>
+                </div>
+                <h5 class="text-white text-center bg-black py-2">&copy; 2022 - DigitalServiceCenter - <a asp-area="" asp-page="/Privacy">Privacy</a></h5>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,18 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="wrapper">
+    <section>
+        @foreach(var item in Model.Companeys)
+        {
+        <div class="box">
+            <a class="" name="CompaneyName" href="/Services?CompaneyName=@item.CompaneyName">
+            <img src="~/Images/@item.ImageName" class="img" alt="Laptop">
+            </a>
+        </div>
+        }
+    </section>
+</div>

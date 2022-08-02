@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+*::before,*::after,*{
+    box-sizing: border-box;
+}
+.wrapper{
+    width: 1400px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+/*header style*/
+header{
+   top: 0;
+   background: black;
+   color: white;
+}
+.navbar-nav {
+    column-gap: 20px;
+}
+.nav-item:hover {
+    background: #0ebbf7;
+}
+.nav-link {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff !important;
+}
+.logo{
+    color: #0ebbf7;
+    line-height: 60px;
+    font-weight: bolder;
+    font-family: 'Meow Script', cursive;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    font-size: 30px;
+    text-shadow: 4px 0px 1px rgb(0 0 0), 2px 2px 3px black;
+}
+/*header end*/
+/*Home Page's body styling start*/
+.wrapper section{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px 50px;
+}
+.wrapper section .box{
+    height: 100px;
+    width: 150px;
+    box-shadow: 2px 2px 6px lightgray;
+    border: 1px solid lightgray;
+    transition: all ease-in .3s .2s;
+}
+.wrapper section .box:hover {
+    height: 150px;
+    width: 250px;
+}
+.wrapper section .box .img{
+    height: 100%;
+    width: 100%;
+}
+/*Home Page's body styling end*/
