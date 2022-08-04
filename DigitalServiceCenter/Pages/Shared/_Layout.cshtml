@@ -24,6 +24,9 @@
                 <div class="navbar-collapse collapse d-md-inline-flex justify-content-evenly">
 
                     <ul class="navbar-nav flex-grow-1 justify-content-lg-end">
+                        @{
+                            await Html.RenderPartialAsync("_AdminMenuPartial"); 
+                        }
                         <li class="nav-item text-center">
                             <a class="nav-link py-3 d-block" asp-area="" asp-page="/Index">Home</a>
                         </li>

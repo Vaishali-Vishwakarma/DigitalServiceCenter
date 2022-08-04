@@ -3,9 +3,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DigitalServiceCenter.Models
 {
-    public class Admin
+    public class ApplicationUser
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
         [Required]
         [Column (TypeName ="varchar(255)")]
