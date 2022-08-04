@@ -7,7 +7,7 @@ namespace DigitalServiceCenter.Models
         public DbSet<Companey> Companeys { get; set; }
         public DbSet<Admin> Admin { get; set; }
 
-        public CompaneyDbContext(DbContextOptions options) : base(options)
+        public CompaneyDbContext(DbContextOptions<CompaneyDbContext> options) : base(options)
         {
         }
     }

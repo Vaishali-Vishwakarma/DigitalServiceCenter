@@ -1,4 +1,6 @@
 ﻿@page "{CompaneyName?}"
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager;
 @model DigitalServiceCenter.Pages.ServicesModel
 @{
 	ViewData["Title"] = "Services";
@@ -29,10 +31,13 @@
 				<th width="40%">Address/Contact Info</th>
 				<td>@item.AddressContactInfo</td>
 			</tr>
-			@*<tr>
-				<td><a class="btn btn-primary" href="/Edit?Id=@item.Id">Edit</a></td>
-				<td><a class="btn btn-danger" href="/Delet?Id=@item.Id">Delete</a></td>
-			</tr>*@
+			@if(SignInManager.IsSignedIn(User))
+			{
+				<tr>
+					<td><a class="btn btn-primary" href="/Edit?Id=@item.Id">Edit</a></td>
+					<td><a class="btn btn-danger" href="/Delet?Id=@item.Id">Delete</a></td>
+				</tr>
+			}
 		</table>
 	}
 </div>

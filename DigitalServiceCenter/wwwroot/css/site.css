@@ -47,16 +47,16 @@ header{
     gap: 50px 50px;
 }
 .wrapper section .box{
-    height: 100px;
-    width: 150px;
+    height: 230px;
+    width: 230px;
     box-shadow: 2px 2px 6px lightgray;
     border: 1px solid lightgray;
     transition: all ease-in .3s .2s;
 }
-.wrapper section .box:hover {
-    height: 150px;
-    width: 250px;
-}
+/*.wrapper section .box:hover {
+    height: 120px;
+    width: 150px;
+}*/
 .wrapper section .box .img{
     height: 100%;
     width: 100%;
