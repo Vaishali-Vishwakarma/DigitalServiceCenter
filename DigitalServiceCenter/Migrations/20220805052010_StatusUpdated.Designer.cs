@@ -3,6 +3,7 @@ using DigitalServiceCenter.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DigitalServiceCenter.Migrations
 {
     [DbContext(typeof(CompaneyDbContext))]
-    partial class CompaneyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220805052010_StatusUpdated")]
+    partial class StatusUpdated
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

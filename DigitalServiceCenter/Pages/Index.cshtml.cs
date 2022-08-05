@@ -17,7 +17,7 @@ namespace DigitalServiceCenter.Pages
         public List<Companey> Companeys { get; set; }
         public void OnGet()
         {
-            this.Companeys = _db.Companeys.ToList();
+            this.Companeys = _db.Companeys.Where(x => x.Status == true).ToList();
         }
         /*public void OnGet([FromRoute] string ImageName)
         {
@@ -25,7 +25,8 @@ namespace DigitalServiceCenter.Pages
 
             if (companey != null)
             {
-                *//*companey.CompaneyName = updateAdminRequest.Name;
+                */
+        /*companey.CompaneyName = updateAdminRequest.Name;
                 companey.Email = updateAdminRequest.Role;
                 companey.Subject = updateAdminRequest.Email;
                 companey.Discription = updateAdminRequest.Password;
@@ -33,7 +34,8 @@ namespace DigitalServiceCenter.Pages
                 companey.ImagePath = DateTime.Now;
 
                 await db.SaveChangesAsync();
-                return Ok(companey);*//*
+                return Ok(companey);*/
+        /*
                 this.Companeys = _db.Companeys.Where(x => x.ImageName == ImageName).ToList();
             }
             //return NotFound();

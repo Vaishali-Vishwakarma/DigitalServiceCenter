@@ -49,7 +49,7 @@ namespace DigitalServiceCenter.Pages
         {
             if (ModelState.IsValid)
             {
-                var identityResult = await signInManager.PasswordSignInAsync(Model.Email, Model.Password, Model.RememberMe, false);
+                var identityResult = await signInManager.PasswordSignInAsync(Model.Email, Model.Password, Model.RememberMe,false);
                 if (identityResult.Succeeded)
                 {
                     if(returnUrl == null || returnUrl == "/")

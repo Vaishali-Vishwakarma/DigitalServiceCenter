@@ -5,6 +5,10 @@
 @{
 	ViewData["Title"] = "Services";
 }
+
+@inject UserManager<IdentityUser> UserManager
+
+
 @*<h1>Services</h1>*@
 <div class="container col-md-8">
 	@*<a class="btn btn-primary btn-sm" href="/Registration">Add Companey</a>*@
@@ -31,11 +35,17 @@
 				<th width="40%">Address/Contact Info</th>
 				<td>@item.AddressContactInfo</td>
 			</tr>
-			@if(SignInManager.IsSignedIn(User))
+			@if(SignInManager.IsSignedIn(User) && await UserManager.IsInRoleAsync(UserManager.GetUserAsync(User).Result,"admin"))
 			{
 				<tr>
 					<td><a class="btn btn-primary" href="/Edit?Id=@item.Id">Edit</a></td>
-					<td><a class="btn btn-danger" href="/Delet?Id=@item.Id">Delete</a></td>
+					@*<td>
+						<div class="form-group form-check">
+							<label asp-for=@item.Status class="control-label"></label>
+							<input asp-for=@item.Status class="form-check-input"/>
+						</div>
+					</td>*@
+					<td><a class="btn btn-danger" href="/Delete?Id=@item.Id">Delete</a></td>
 				</tr>
 			}
 		</table>
